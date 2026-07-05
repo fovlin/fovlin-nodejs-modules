@@ -1,5 +1,5 @@
-import * as cipher from "./cipher.js";
+import * as cipher from "./modules/cipher.js";
 
-// cipher.encryptFile("aes-128-gcm","tagore.txt",128,16)
+// cipher.encryptFile("aes-256-gcm","kaguya.mkv",256,16)
 
-// cipher.decryptFile('tagore.txt.enc','tagore.txt.key')
+cipher.decryptFile('kaguya.mkv.enc','kaguya.mkv.key')

@@ -68,5 +68,13 @@ export function decryptFile(encFile, keyFile) {
     authTagLength = secText["authTagLength"];
     var decipher = crypto.createDecipheriv(algorithm, Buffer.from(key,"hex"), Buffer.from(iv,"hex"), {authTagLength:authTagLength});
     decipher.setAuthTag(Buffer.from(tag,"hex"));
-    inputData.pipe(decipher).pipe(outputData);
+    stream.pipeline(
+        inputData,
+        decipher,
+        outputData,
+        (err) => {
+            if (err) throw err;
+            console.log('Decipher completed!')
+        }
+    )
 }
