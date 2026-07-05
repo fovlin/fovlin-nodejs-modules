@@ -8,7 +8,7 @@ export function randomAllChar(lentgh) {
     return string;
 }
 
-export function randomChar(length,option = ['number','lower','upper']) {
+export function randomString(length,option = ['number','lower','upper']) {
     let charList = [], string = '', range = 0;
     for (var index = 0; index <= option.length - 1; index++) {
         let selection = option[index]
