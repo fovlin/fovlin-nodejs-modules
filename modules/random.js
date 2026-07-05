@@ -1,7 +1,7 @@
-export function randomAllChar(lentgh) {
+export function randomAllChar(length) {
     var charList = [];
     var string = ''
-    for (var i = 1; i <=lentgh; i++) {
+    for (var i = 1; i <=length; i++) {
         let randomNum = Math.floor(32 + Math.random() * 95);
         string += String.fromCharCode(randomNum)
     }
