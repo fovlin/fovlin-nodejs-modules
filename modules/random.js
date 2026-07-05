@@ -39,6 +39,3 @@ export function randomChar(length,option = ['number','lower','upper']) {
     }
     return string;
 }
-
-console.log(randomChar(12))
-
